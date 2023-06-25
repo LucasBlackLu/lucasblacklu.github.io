@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Black Lu</title>
+        <link>https://lucasblacklu.github.io/categories/</link>
+        <description>Recent content in Categories on Black Lu</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Fri, 26 May 2023 05:02:28 +0800</lastBuildDate><atom:link href="https://lucasblacklu.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Daily</title>
+        <link>https://lucasblacklu.github.io/categories/daily/</link>
+        <pubDate>Fri, 26 May 2023 05:02:28 +0800</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/categories/daily/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Guidance</title>
+        <link>https://lucasblacklu.github.io/categories/guidance/</link>
+        <pubDate>Tue, 23 May 2023 14:33:51 +0800</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/categories/guidance/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Program</title>
+        <link>https://lucasblacklu.github.io/categories/program/</link>
+        <pubDate>Tue, 23 May 2023 14:33:51 +0800</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/categories/program/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

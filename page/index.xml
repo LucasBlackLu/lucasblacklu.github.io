@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Black Lu</title>
+        <link>https://lucasblacklu.github.io/page/</link>
+        <description>Recent content in Pages on Black Lu</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Sat, 28 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lucasblacklu.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>封存</title>
+        <link>https://lucasblacklu.github.io/archives/</link>
+        <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://lucasblacklu.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>鏈接</title>
+        <link>https://lucasblacklu.github.io/%E9%8F%88%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/%E9%8F%88%E6%8E%A5/</guid>
+        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
+&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>關於</title>
+        <link>https://lucasblacklu.github.io/%E9%97%9C%E6%96%BC/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/%E9%97%9C%E6%96%BC/</guid>
+        <description>&lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;
+&lt;p&gt;我是誰？我自己也不知道，我只知道我的靈魂在我的軀體，只知道自己喜歡Android和開源以及ArchLinux，(其他發行版不適合喜歡追求新事物的我，即使ArchLinux讓我滾炸了好幾遍)。還有便是交流歷史，哲學，社會學;馬克思之流就算了，還他的經濟理論停留在19世紀。&lt;/p&gt;
+&lt;h2 id=&#34;性取向&#34;&gt;性取向&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://lucasblacklu.github.io/%E9%97%9C%E6%96%BC/roc.png&#34;
+	width=&#34;1600&#34;
+	height=&#34;1000&#34;
+	srcset=&#34;https://lucasblacklu.github.io/%E9%97%9C%E6%96%BC/roc_hub8a356d7715beac33d8acbeb820f5b5e_6673_480x0_resize_box_3.png 480w, https://lucasblacklu.github.io/%E9%97%9C%E6%96%BC/roc_hub8a356d7715beac33d8acbeb820f5b5e_6673_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+最近幾年LGBTQ+很火，剛好可以我的也是彩虹旗&lt;/p&gt;
+&lt;h2 id=&#34;三觀&#34;&gt;三觀&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;維基百科解釋，三觀即世界觀、人生觀、價值觀的合稱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;就單論世界觀，在中國大多數人活在宣傳機器塑造的信息繭房，不知道世界的運行規律，程序員也是，大多數人還在用百度。&lt;/p&gt;
+&lt;p&gt;人生觀？我現在才20多，自己都活不明白。我怎麼知道？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;價值觀（Values）是一種處理事情判斷對錯、做選擇時取捨的標準。有益的事物才有正價值。對有益或有害的事物評判的標準就是一個人的價值觀。不同的價值觀會產生不同的行為模式，進而產生不同的社會文化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;個人更傾向於貴族豐富當中的責任感和榮譽感; 還有便是自己有的底線，如不樂衷與檢舉他人，就如一句話所說“小人物也有自己的堅持，小人物也有自己的道德底線;有時候小人的道德底線就成爲了一個時代的道德底線”。還有便是個人不喜歡社會達爾文主義，中國社會的就是內核是社會達爾文主義。
+大多數人的的三觀在青少年形成雛形，然後在定於30左右，往後的日子就活在自己的認知當中，作繭自縛，所以人需要不斷學習新的知識和技術&lt;/p&gt;
+&lt;h2 id=&#34;個人不好幾點&#34;&gt;個人不好幾點&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;拖延症，一拖幾天，心血來潮才開始着手幹活&lt;/li&gt;
+&lt;li&gt;三分鐘熱度，很容易學東西學一下就沒，需要慢慢改變&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;願景&#34;&gt;願景&lt;/h2&gt;
+&lt;p&gt;我出身在粵西北的鄉村，從小就與祖父母居住，對家鄉並沒有什麼身份認同感和文化歸屬感，最多就是那邊食物，更多的是對親人的牽掛。我喜歡我有一天就像&lt;a class=&#34;link&#34; href=&#34;https://zh.wikipedia.org/wiki/%E7%87%83%E6%83%85%E5%B2%81%E6%9C%88&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;燃情歲月&lt;/a&gt;(真愛一世情)裏面的崔斯汀一樣，在廣袤的大草原上放羊打獵，然後跟愛人騎馬散步。
+如果有機會我希望我能早日潤走，在不確定的未來，或許離開是最好的選擇&lt;/p&gt;
+&lt;h2 id=&#34;結語&#34;&gt;結語&lt;/h2&gt;
+&lt;p&gt;我的部落格即博客，主要是分享和記錄一些技術性的內容，還有自己日常的一些生活和感想。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

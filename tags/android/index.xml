@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Android on Black Lu</title>
+        <link>https://lucasblacklu.github.io/tags/android/</link>
+        <description>Recent content in Android on Black Lu</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Tue, 23 May 2023 14:33:51 +0800</lastBuildDate><atom:link href="https://lucasblacklu.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ArchLinux安裝</title>
+        <link>https://lucasblacklu.github.io/p/archlinux%E5%AE%89%E8%A3%9D/</link>
+        <pubDate>Tue, 23 May 2023 14:33:51 +0800</pubDate>
+        
+        <guid>https://lucasblacklu.github.io/p/archlinux%E5%AE%89%E8%A3%9D/</guid>
+        <description>&lt;img src="https://lucasblacklu.github.io/p/archlinux%E5%AE%89%E8%A3%9D/arch.png" alt="Featured image of post ArchLinux安裝" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本來有寫這個博客的想法，但無奈最近時間比較忙&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一心想去編譯Samsung內核，中間一波多折.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;故一拖再拖。幸好最近內核的進程一直擱置，我就打算今晚扔到Stackoverflow然後收穫一堆downvote，或者去XDA看看。&lt;/p&gt;
+&lt;h2 id=&#34;材料準備&#34;&gt;材料準備&lt;/h2&gt;
+&lt;p&gt;電腦，U盤各一個，在&lt;a class=&#34;link&#34; href=&#34;https://archlinux.org/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ArchLinux官方&lt;/a&gt;選擇鏡像站下載鏡像，用&lt;a class=&#34;link&#34; href=&#34;https://etcher.balena.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Etcher&lt;/a&gt;製作啓動U盤&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Etcher 有個非常好的優點——全平臺兼容，醬紫就不怕出現在Linux很難製作Windows啓動U盤的尷尬場面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;安裝步驟&#34;&gt;安裝步驟&lt;/h2&gt;
+&lt;h3 id=&#34;製作啓動盤&#34;&gt;製作啓動盤&lt;/h3&gt;
+&lt;p&gt;打開Etcher 直接選擇iso文件再選擇U盤安裝即可
+&lt;img src=&#34;https://lucasblacklu.github.io/p/archlinux%E5%AE%89%E8%A3%9D/etcher.png&#34;
+	width=&#34;1593&#34;
+	height=&#34;1015&#34;
+	srcset=&#34;https://lucasblacklu.github.io/p/archlinux%E5%AE%89%E8%A3%9D/etcher_hu6381e2e734e42ff5318ef07523feabe7_49359_480x0_resize_box_3.png 480w, https://lucasblacklu.github.io/p/archlinux%E5%AE%89%E8%A3%9D/etcher_hu6381e2e734e42ff5318ef07523feabe7_49359_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;376px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;進入bios&#34;&gt;進入BIOS&lt;/h3&gt;
+&lt;p&gt;每個主板或筆電進入BIOS的方法,各不相同故請自行Google
+記得在BIOS裏面關閉secure boot&lt;/p&gt;
+&lt;h3 id=&#34;連接網路&#34;&gt;連接網路&lt;/h3&gt;
+&lt;h4 id=&#34;有線網路&#34;&gt;有線網路&lt;/h4&gt;
+&lt;p&gt;接上網路，稍等片刻即可&lt;/p&gt;
+&lt;h4 id=&#34;無線網路&#34;&gt;無線網路&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;iwctl #進入無線網路工具         
+device list # 列出網路設備 通常爲Wlan0
+station wlan0 scan #掃描無線網路
+station wlan0 get-networks #列出可用無線網路
+station wlan0 connnect WiFiname
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;WiFiname 爲WiFi 名稱，輸入一部分可用Tab補全，然後輸入密碼回車，最後輸入exit退出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;測試網路連接是否正常&#34;&gt;測試網路連接是否正常&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;ping www.bing.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;設定鏡像網站&#34;&gt;設定鏡像網站&lt;/h3&gt;
+&lt;p&gt;把我们要设定的镜像站放在前面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;使用上下左右鍵移動，按i輸入文字，改好後按Esc，再輸入「:wq」退出VIM&lt;/li&gt;
+&lt;li&gt;如果真的不會如何使用vim那就Google一下再回來吧&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;vim /etc/pacman.d/mirrorlist #打開文件按需求把下面的源加進去
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;中國大陸用戶設定清華源和中科大即可&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#China 
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;臺灣用戶的可用使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Server = https://mirror.archlinux.tw/ArchLinux/$repo/os/$arch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;分割磁盤&#34;&gt;分割磁盤&lt;/h3&gt;
+&lt;p&gt;archlinux安裝需要分三個分區&lt;/p&gt;
+&lt;p&gt;efi分區 512MB.&lt;/p&gt;
+&lt;p&gt;swap分區 運存的60%&lt;/p&gt;
+&lt;p&gt;主分區 剩餘部分即爲主分區 .&lt;/p&gt;
+&lt;p&gt;下面將會把磁盤轉化爲gpt格式，固態硬盤一般爲nvme0n1，我們是直接但系統故直接裝在固態硬盤&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lsblk #顯示分區情況
+parted /dev/nvme0n1
+(parted)mktable            #輸入mktable
+New disk label type? gpt   #輸入gpt 輸入yes即可
+quit                       #退出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面將會用cfdisk分割磁盤，efi分區格式type爲 EFI Ssystem，Swap分區爲Swap System，主分區爲Lnux System&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cfdisk /dev/nvme0n1 #執行分割分區大小，類型
+fdisk -l 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;配置分區&#34;&gt;配置分區&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;mkfs.vfat /dev/nvmexn1p1 #格式化EFI分區
+mkfs.ext4 /dev/nvmexn1p3 # 格式化主分區爲ext4
+
+mount /dev/nvmexn1p3 /mnt #掛載主分區到/mnt
+mkdir -p /mnt/boot/efi 
+mount /dev/nvmexn1p1 /mnt/boot/efi #掛載efi分區
+
+mkswap /dev/nvmexn1p2 
+swappon /dev/nvmexn1p2 #設定Swao分區
+fdisk -l #查看分區掛載是否正確
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;用pacstrap安裝基本linux檔案系統base核心linux&#34;&gt;用pacstrap安裝基本Linux檔案系統base、核心linux&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pacstrap /mnt linux linux-firmware linux-headers base base-devel vim
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;生成fstab&#34;&gt;生成fstab&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;檢視掛載狀況&#34;&gt;檢視掛載狀況&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;cat /mnt/etc/fstab
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;chroot到系統&#34;&gt;chroot到系統。&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;arch-chroot /mnt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;設定主機名和時區&#34;&gt;設定主機名和時區&lt;/h3&gt;
+&lt;h4 id=&#34;首先在etchostname設定主機名字&#34;&gt;首先在/etc/hostname設定主機名字&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;vim /etc/hostname #輸入ArchLinux 再：wq保存退出即可
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ArchLinux 爲主機名&lt;/p&gt;
+&lt;h4 id=&#34;在vim-etchosts配置hosts&#34;&gt;在vim /etc/hosts配置hosts&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;127.0.0.1   localhost
+::1         localhost
+127.0.1.1   ArchLinux.localdomain ArchLinux
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;設定時區&#34;&gt;設定時區&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;ln -sf /usr/share/zoneinfo/Asia/Taipei /etc/localtime # 設定臺北爲時間同步時區 二選一
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime # 設定上海爲時間同步時區 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;硬體時間&#34;&gt;硬體時間&lt;/h4&gt;
+&lt;p&gt;用命令將同步時間設定到硬體&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hwclock --systohc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安裝微碼&#34;&gt;安裝微碼&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S intel-ucode # Intel
+pacman -S amd-ucode # AMD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;設定locale&#34;&gt;設定locale&lt;/h3&gt;
+&lt;p&gt;編輯 /etc/locale.gen，去掉 en_US.UTF-8 UTF-8 以及 zh_CN.UTF-8 UTF-8 tw_CN.UTF-8 UTF-8&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; vim /etc/locale.gen
+locale-gen 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 /etc/locale.conf 設定爲英文，防止亂碼&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &#39;LANG=en_US.UTF-8&#39;  &amp;gt; /etc/locale.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装桌面程式&#34;&gt;安装桌面程式&lt;/h3&gt;
+&lt;h4 id=&#34;安装基本软体&#34;&gt;安装基本软体&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S sudo networkmanager vim firefox noto-fonts-cjk noto-fonts-emoji
+pacman -S xorg xorg-server pipewire intel-ucode nvtop
+pacman -S fcitx5-im fcitx5-chewing fcitx5-qt fcitx5-gtk fcitx5-chinese-addons
+pacman -S git openssh fakeroot base-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装gnome-桌面&#34;&gt;安装gnome 桌面&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S gnome gdm 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;安装kde桌面&#34;&gt;安装KDE桌面&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S sddm plasma-meta kde-applications plasma-wayland-session
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;sddm 为kde桌面的登錄管理器，而gdm为gnome的，
+两个桌面二選一即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;僅適用於我的華碩vivobook筆電的聲卡軟體&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;如果聲卡不行，可以去arch.wiki查詢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S sof-firmware
+sudo pacman -S alsa-ucm-conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;爲root用戶設定密碼&#34;&gt;爲Root用戶設定密碼&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;passwd root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;配置root用戶默認編輯器&#34;&gt;配置Root用戶默認編輯器&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在git 和visudo archlinux會使用vi而不是vim，有時候會出錯，所以需要設置默認編輯器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;vim ~/.bash_profile
+export EDITOR=&#39;vim&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;創建普通用戶&#34;&gt;創建普通用戶&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;username 爲用戶名，可自行改成自己的名字如 black
+useradd -m -G wheel -s /bin/bash username
+passwd user # 設定普通用戶密碼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;給予普通用戶sudo權限&#34;&gt;給予普通用戶sudo權限&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;EDITOR=vim visudo # 設定visudo的編輯器爲vim,上面的配置尚未生效
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;找到這行#%wheel ALL=(ALL:ALL) ALL，並把前面的註釋符 # 去掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;設定開機服務&#34;&gt;設定開機服務&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;systemctl enable sddm.service #kde桌面需要
+systemctl enable gdm.service #gnome桌面需要
+systemctl enable NetworkManager.service #網路管理員，會自動處理網路連線變更
+systemctl enable sshd.service #ssh服務
+sudo systemctl enable --now bluetooth 啓用藍牙服務(若有)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;安裝引導程式&#34;&gt;安裝引導程式&lt;/h3&gt;
+&lt;h4 id=&#34;安裝對應的軟體&#34;&gt;安裝對應的軟體&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S grub efibootmgr
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装grub-到efi分区&#34;&gt;安装grub 到EFI分区&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=ARCH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;生成grub所需文件&#34;&gt;生成grub所需文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;系統安裝完成退出chroot取消掛載重啓&#34;&gt;系統安裝完成。退出chroot，取消掛載，重啓&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;exit
+umount /mnt
+reboot 重啓 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;系統後續安裝優化&#34;&gt;系統後續安裝優化&lt;/h2&gt;
+&lt;h3 id=&#34;配置中文輸入法&#34;&gt;配置中文輸入法&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo vim /etc/environment
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把下面這幾行加入即可&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;clash-for-windows-代理軟體&#34;&gt;Clash for windows 代理軟體&lt;/h3&gt;
+&lt;p&gt;開啓&lt;a class=&#34;link&#34; href=&#34;https://github.com/Fndroid/clash_for_windows_pkg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clash for windows GitHub倉庫&lt;/a&gt;，下載含linux字符文件並解壓運行cfw即可，如有不明之處可查看&lt;a class=&#34;link&#34; href=&#34;https://clashforwindows.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官網&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;pacman套件管理員使用方式&#34;&gt;pacman套件管理員使用方式&lt;/h3&gt;
+&lt;p&gt;pacman 相當於ubuntu 的apt-get,此節列出Arch Linux的套件管理員pacman的常用指令。&lt;!-- raw HTML omitted --&gt;
+搜索線上倉庫軟體&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -Ss &amp;lt;套件名稱&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用此指令安裝套件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S &amp;lt;套件名稱&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;移除套件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -R &amp;lt;套件名稱&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;以下指令會更新整個系統的套件。因為Arch Linux是滾動發行版，建議每半個月進行一次全系統更新。更新前建議看ArchLinux的新聞有無嚴重bug再更新。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -Syu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;強制同步套件庫。某個套件無法下載的時候才執行此指令。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -Syu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;刪除本機套件快取
+sudo pacman -Sc&lt;/p&gt;
+&lt;p&gt;查看本地已安裝套件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -Qt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可用來移除桌面冗餘的套件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;安裝aur套件管理員&#34;&gt;安裝AUR套件管理員&lt;/h3&gt;
+&lt;p&gt;AUR (Arch User Repository) 是Arch Linux官方套件庫以外的主要套件來源。AUR沒有收錄套件檔案，只有編譯套件的設定檔。AUR套件最直接的裝法是手動git clone儲存庫，然後檢查依賴項目，再用makepkg指令打包安裝。&lt;/p&gt;
+&lt;p&gt;但是這樣太麻煩了，所以我們通常會安裝一個AUR Helper來自動化處理，我使用yay，語法跟pacman很像&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;yay 安裝套件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yay -S google-chrome # 按下Enter同意安裝，並按照螢幕提示輸入密碼
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;yay 移除套件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yay -R google-chrome
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;更新所有AUR套件，並順便更新整個系統的套件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yay -Syu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;自用gnome-插件&#34;&gt;自用gnome 插件&lt;/h2&gt;
+&lt;p&gt;先安裝gnome-browser-connector&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;yay -S gnome-browser-connector
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;blur-my-shellhttpsextensionsgnomeorgextension3193blur-my-shell-模糊抽屜界面不再是灰色&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/3193/blur-my-shell/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;blur-my-shell&lt;/a&gt; 模糊抽屜界面不再是灰色&lt;/h3&gt;
+&lt;h3 id=&#34;caffeine-httpsextensionsgnomeorgextension517caffeine-禁用熒幕保護和自動暫停&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/517/caffeine/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Caffeine &lt;/a&gt; 禁用熒幕保護和自動暫停&lt;/h3&gt;
+&lt;h3 id=&#34;clipboard-indicatorhttpsextensionsgnomeorgextension779clipboard-indicator-剪貼板管理器記錄你複製過的內容&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/779/clipboard-indicator/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Clipboard Indicator&lt;/a&gt; 剪貼板管理器，記錄你複製過的內容&lt;/h3&gt;
+&lt;h3 id=&#34;coverflow-alt-tabhttpsextensionsgnomeorgextension307dash-to-dock-此插件可以實現mac系統的快速切換任務且自帶流暢切換動畫&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/307/dash-to-dock/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Coverflow Alt-Tab&lt;/a&gt; 此插件可以實現Mac系統的快速切換任務且自帶流暢切換動畫&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/307/dash-to-dock/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Dash to Dock&lt;/a&gt; 固定Dock欄，gnome在某次更新砍了這個功能&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/3088/extension-list/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Extension List&lt;/a&gt; 在狀態欄開啓插件清單&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/750/openweather/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenWeather &lt;/a&gt; 在頂欄顯示天氣狀況&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://extensions.gnome.org/extension/1460/vitals/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Vitals &lt;/a&gt; 一個很好用的插件可快速查看系統的CPU，Ram，存儲佔用狀況&lt;/p&gt;
+&lt;h3 id=&#34;android-刷機工具&#34;&gt;Android 刷機工具&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -S android-tools
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;配置android-rom-編譯環境&#34;&gt;配置Android Rom 編譯環境&lt;/h2&gt;
+&lt;p&gt;這裏不得不說一下，Archlinux的優點Aur,得益於Aur,安裝編譯Android Rom 的套件僅需開啓32位庫&lt;/p&gt;
+&lt;h3 id=&#34;開啓32位庫支援&#34;&gt;開啓32位庫支援&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;vim /etc/pacman.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;僅需把下面兩行前面的#去掉,輸入：wq保持並推出即可&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#[community]
+#Include = /etc/pacman.d/mirrorlist
+
+sudo pacman -Syyu #更新套件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安裝所需套件&#34;&gt;安裝所需套件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;yay -S lineageos-devel android-devel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;文章引用&#34;&gt;文章引用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;arch-linux安裝教學kde-plasma桌面中文輸入法httpsivonblogcompostsinstall-archlinux&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://ivonblog.com/posts/install-archlinux/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Arch Linux安裝教學，KDE Plasma桌面＋中文輸入法&lt;/a&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;archlinux-基础安装httpsarchicekylinonlineguide&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://arch.icekylin.online/guide/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;archlinux 基础安装&lt;/a&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;如果你感覺arch很耗電可以看看這篇文章httpsflymeow-2compostrecordstlp-for-power-savinghtml&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://fly.meow-2.com/post/records/tlp-for-power-saving.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如果你感覺Arch很耗電，可以看看這篇文章&lt;/a&gt;&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
